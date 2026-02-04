@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Award, Briefcase, User } from 'lucide-react';
 import { useRef } from 'react';
+import profileImg from '../assets/profile.jpg';
 
 const About = () => {
     const containerRef = useRef(null);
@@ -103,7 +104,7 @@ const About = () => {
 
                             <div className="w-full h-full rounded-full overflow-hidden relative z-10">
                                 <img
-                                    src="/src/assets/profile.jpg"
+                                    src={profileImg}
                                     alt="Harikrishna S"
                                     className="w-full h-full object-cover"
                                 />
