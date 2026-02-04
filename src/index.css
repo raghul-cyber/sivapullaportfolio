@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 24 9.8% 10%;
+    /* #1c1917 - Very dark warm gray */
+    --foreground: 60 9.1% 97.8%;
+    /* #fafaf9 - Warm white */
+
+    --primary: 24.6 95% 53.1%;
+    /* #f97316 - Fiery Orange */
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 24 5.4% 63.9%;
+    /* Muted ash gray */
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --accent: 12 76% 61%;
+    /* #eb5e41 - Reddish orange */
+    --accent-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24.6 95% 53.1%;
+  }
+
+  .dark {
+    --background: 24 9.8% 10%;
+    --foreground: 60 9.1% 97.8%;
+    --primary: 24.6 95% 53.1%;
+    --secondary: 12 6.5% 15.1%;
+    --accent: 12 76% 61%;
+  }
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: #0c0a09;
+  /* Hardcode dark background */
+  color: #fafaf9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-3000 {
+  perspective: 3000px;
+}
+
+/* Fire Text Effect */
+.text-fire {
+  background: linear-gradient(to top, #fcd34d 0%, #f97316 40%, #ef4444 80%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.5));
+}
+
+selection {
+  @apply bg-primary text-white;
+}
