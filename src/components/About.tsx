@@ -39,7 +39,7 @@ const About = () => {
                     />
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-2 gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -61,7 +61,7 @@ const About = () => {
                             stop the scroll and drive clicks.
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+                        <div className="grid grid-cols-3 gap-6 pt-6">
                             {[
                                 { icon: <Briefcase className="w-8 h-8 text-primary mb-2" />, label: "Experience", value: "1+ Years" },
                                 { icon: <User className="w-8 h-8 text-primary mb-2" />, label: "Available", value: "Freelance" },
